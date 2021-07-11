@@ -11,11 +11,12 @@ def start_adventure():
 
 def left_door():
     print("The door handle clunks as you turn it.\nIt opens.\n You can see two narrow green eyes looking at you. ")
-    flee_fight = (input("Do you flee or fight?").lower())
-    if flee_fight == "flee":
+    print("Do you flee or fight?")
+    next_move = input("> ").lower()
+    if "flee" in next_move:
         print("You chose to flee.\n You are back in the damp, dark room")
         start_adventure()
-    elif flee_fight == "fight":
+    elif "fight" in next_move:
         print("You chose to fight")
     else:
         print("If you don't choose you die!")
